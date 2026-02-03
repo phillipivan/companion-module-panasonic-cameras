@@ -7,14 +7,11 @@ import { setVariables, checkVariables } from './variables.js'
 import { ConfigFields } from './config.js'
 import * as net from 'net'
 import got from 'got'
-import JimpRaw from 'jimp'
+import { Jimp } from 'jimp'
 import EventEmitter from 'events'
 import { getAndUpdateSeries } from './common.js'
 import { parseUpdate, parseWeb, parseWebCode } from './parser.js'
 import { pollCameraStatus } from './polling.js'
-
-// Webpack makes a mess..
-const Jimp = JimpRaw.default || JimpRaw
 
 // ########################
 // #### Instance setup ####
